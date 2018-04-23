@@ -8,12 +8,12 @@
 
         <% @books.each do |book| %>
             <section class="book-text">
-            	<tr><th>
-            	<%= book.title %></th>
-              <th class="category"><%= book.body %></th>
-              <th><%= link_to "Show", book_path(book.id) %></th>
-              <th><%= link_to "Edit", edit_book_path(book.id) %></th>
-              <th><a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/book">Destroy</a></th>
+            	<tr>
+              <td class="title"><%= book.title %></td>
+              <td class="category"><%= book.body %></td>
+              <td><%= link_to "Show", book_path(book.id) %></td>
+              <td><%= link_to "Edit", edit_book_path(book.id) %></td>
+              <td><%= link_to "Destroy", book_path(book.id), method: :delete, data: {confirm: "Are you sure?"} %></td>
              </tr>
             </section>
 
@@ -30,7 +30,7 @@
 
 
 <h4>Body</h4>
-<textarea name="book[body]" id="book_body"></textarea>
+<%= f.text_area :body %>
 <br>
 
 <%= f.submit 'Create Book' %>
