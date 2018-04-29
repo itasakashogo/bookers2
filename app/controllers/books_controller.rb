@@ -1,7 +1,6 @@
 class BooksController < ApplicationController
   before_action :correct_book, only: [:edit, :update, :destroy]
 
-
   def root
   	
   end
