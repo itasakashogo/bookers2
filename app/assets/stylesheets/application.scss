@@ -12,4 +12,44 @@
  *
  *= require_tree .
  *= require_self
+
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+.nav-color{
+	color:#666;
+}
+
+
+
+nav li a {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+@media screen and (min-width: 768px){
+	nav li a {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+}
+
+.test .glyphicon .glyphicon-home :hover {
+	background-color: black;
+}
+
+.headline .btn-block {
+	margin-top: 0px;
+}
+
+.notice{
+	color: green;
+}
+
+.create{
+	margin-top: 10px;
+}
+
+

@@ -1,0 +1,20 @@
+<div class="container">
+   <div class="row">
+          <h2>User info</h2>
+              <%= form_for(@user) do |f| %>
+            <div class="form-group has-icon">
+                <label>Name</label>
+                <%= f.text_field :name, autofocus: true, id:"name" %>
+
+                <div class="field"><label>Image</label>
+                <%= f.attachment_field :profile_image %></div>
+
+            <label>Introduction</label>
+                <%= f.text_area :introduction, autofocus: true, id:"introduction" %>
+            </div>
+            <div class= "actions">
+            <%= f.submit "Update User" %></div>
+        <% end %>
+
+  </div>
+ </div>

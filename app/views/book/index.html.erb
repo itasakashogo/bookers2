@@ -1,0 +1,37 @@
+
+　　<div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <h2>User info</h2>
+      </div>
+
+           <%= form_for(@book) do |f| %>
+
+      <div class="col-lg-10">
+      <table class="table table-striped">
+      		<tr><h3>Books</h3>
+      			<th>Title</th><th>Opinion</th>
+      		</tr>
+
+        <% @books.each do |book| %>
+            <section class="book-text">
+            	<tr>
+              <td class="title"><%= book.title %></td>
+              <td class="body"><%= book.body %></td>
+             </tr>
+
+            </section>
+       <% end %>
+      </table>
+    </div>
+    <h2>New book</h2>
+      <h4>Title</h4>
+         <%= f.text_field :title %>
+       <h4>Opinion</h4>
+       <%= f.text_area :body %><br>
+       <button class="btn btn-primary">Create book</button>
+
+<% end %>
+
+    </div>
+  </div>
