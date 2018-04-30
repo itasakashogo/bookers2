@@ -31,7 +31,11 @@ class BooksController < ApplicationController
   	 book = Book.new(book_params)
      book.user_id = current_user.id
   	 book.save
-  	 redirect_to book_path(book.id)
+  	 if book.save
+      redirect_to book_path(book.id)
+    else
+      redirect_to user_path(book.user_id)
+    end
   end
 
   def edit

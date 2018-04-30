@@ -5,6 +5,7 @@ class Book < ApplicationRecord
 
   validates :title, presence: true
   validates :category,  length: { maximum: 200 }
+  
 
 end
 
